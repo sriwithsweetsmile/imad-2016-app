@@ -2,7 +2,100 @@
 <!DOCTYPE html >
 <head>
 	<title>	Late Reporter</title>
-</head>
+	<script language="javascript" type="text/javascript">
+		function validateForm() 
+		{
+			var x = document.ins.rno.value;
+			if (x == null || x == "") 
+			{
+				alert("Please enter a roll numsber.");
+				document.ins.rno.focus() ;
+				return false;
+			}	
+		}
+    function validateFormi() {
+    var x = document.ext.rnog.value;
+    if (x == null || x == "") {
+        alert("Please enter a roll number.");
+        document.ext.rnog.focus() ;
+        return false;
+    }
+    }
+ </script>
+<style>
+
+	body
+	{
+		background-color:#006400 ;
+		font-family: 'Hind Guntur', sans-serif;
+		color:white;
+		font-size:10px;
+	}
+	.main
+	{
+		position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 50px;
+        right: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+	}
+	.subform
+	{
+		top: 20px;
+		background-color:white;
+		border-radius:5px;
+		padding: 20px; 
+		margin-bottom: 10px;
+		color:black;
+		width: 100%;
+	}
+	.getform
+	{
+		top: 20px;
+		background-color:white;
+		border-radius:5px;
+		padding: 20px; 
+		color:black;
+		width: 100%;
+	}
+	input[type=text] 
+	{
+		width: 100%;
+		padding: 12px 20px;
+		box-sizing: border-box;
+		border-radius:5px;
+		background-color:#272822;
+		font-family: 'Hind Guntur', sans-serif;
+		color:white;
+	}
+	input[type=submit] 
+	{
+		width: 90%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		color:#006400;
+		border-radius:5px;
+		background-color:white;
+		font-family: 'Hind Guntur', sans-serif;
+		font-size:20px;
+	}
+	input[type=text]:hover 
+	{   
+		background-color:#000000;
+		color:white;
+	}
+	input[type=submit]:hover 
+	{
+		background-color:#006400;
+		color:white;
+	}
+</style>
+ </head>
 
 <body>
     
