@@ -1,17 +1,60 @@
-<!doctype html>
-<html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="center">
-            <img src="/ui/madi.png" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am your webapp.
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
+
+<!DOCTYPE html >
+<head>
+	<title>	Late Reporter</title>
+	<script language="javascript" type="text/javascript">
+		function validateForm() 
+		{
+			var x = document.ins.rno.value;
+			if (x == null || x == "") 
+			{
+				alert("Please enter a roll numsber.");
+				document.ins.rno.focus() ;
+				return false;
+			}	
+		}
+    function validateFormi() {
+    var x = document.ext.rnog.value;
+    if (x == null || x == "") {
+        alert("Please enter a roll number.");
+        document.ext.rnog.focus() ;
+        return false;
+    }
+    }
+ </script>
+
+ </head>
+
+<body>
+    
+	<div class="main">
+		<center>
+			<h1>Late Reporter</h1>
+		</center>
+		<div class="subform">
+			<center>
+				<h1>Report</h1>
+			</center>
+			<form action="late.php" name="ins" method="POST"  onsubmit="return validateForm()">
+				<input type="text" name="rno" placeholder="Roll-Number" >
+				<center>
+					<input type="submit" name="sub" >
+				</center>
+			</form>
+		</div>
+		<div class="getform">
+			<center>
+				<h1>Enquiry</h1>
+			</center>
+			<form action="lateg.php" name="ext" method="POST" onsubmit="return validateFormi()">
+				<input type="text" name="rnog" placeholder="Roll-Number">
+				<center>
+					<input type="submit" name="subg" value="get" onclick="validateFormi()">
+				</center>
+			</form>
+		</div>
+	</div>
+</body>
+
+ 
 </html>
